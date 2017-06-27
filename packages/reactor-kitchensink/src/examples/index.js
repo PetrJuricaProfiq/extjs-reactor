@@ -12,8 +12,8 @@ import ToolGrid from './Grid/AddonsDecorations/GridTools/GridTools';
 import StockTickerGrid from './Grid/AdvancedFeatures/StockTicker/StockTicker'; 
 import ReduxGrid from './Grid/ReduxGrid/ReduxGrid';
 import RowBodyGrid from './Grid/AddonsDecorations/RowBody/RowBody';
-import FlexibleSelection from './Grid/AdvancedFeatures/FlexibleSelection/FlexibleSelection';
-import RendererCell from './Grid/AdvancedFeatures/RendererCell/RendererCell';
+import SelectAndCopy from './Grid/AdvancedFeatures/SelectAndCopy/SelectAndCopy';
+import RenderComponentsInCells from './Grid/AdvancedFeatures/RenderComponentsInCells/RenderComponentsInCells';
 
 import Panel from './Panel/Panel';
 
@@ -235,6 +235,8 @@ import Files from './DragAndDrop/Files/Files';
  
 import Transition from './Transition/Transition';
 
+import Wizard from './Wizard/Wizard';
+
 const root = {
     id: '/',
     text: 'All',
@@ -325,7 +327,8 @@ const root = {
             { text: 'Toolbar', component: Toolbar, navIcon: 'icon-toolbar' },
             { text: 'ToolTip', component: ToolTip, layout: 'center', navIcon: 'icon-tooltips'  },
             { text: 'Touch Events', component: TouchEvents, navIcon: 'icon-touch-events' },
-            { text: 'Transition', component: Transition, navIcon: 'icon-Transition' }
+            { text: 'Transition', component: Transition, navIcon: 'icon-Transition' },
+            { text: 'Wizard', component: Wizard, navIcon: 'icon-layout-card-indicator', layout: Ext.os.is.Phone ? 'fit': 'center' },
         ]},
         { text: 'Grids', navIcon: 'icon-grids', children: [
             { text: 'Core Features', navIcon: 'icon-grids', children: [
@@ -343,9 +346,9 @@ const root = {
             ]},
             { text: 'Advanced Features', navIcon: 'icon-grid-plugins', children:[
                 { text: 'Big Data', component: BigDataGrid, navIcon: 'icon-big-data-grid' },
-                { text: 'Flexible Selection', component: FlexibleSelection, navIcon: 'icon-flexible-selection-grid' },
+                { text: 'Select And Copy', component: SelectAndCopy, navIcon: 'icon-flexible-selection-grid' },
                 { text: 'Reconfigure Grid', component: ReconfigureGrid, navIcon: 'icon-reconfigure-grid' },
-                { text: 'Render Components in Cells', component: RendererCell, navIcon: 'icon-grid-tools' },
+                { text: 'Render Components In Cells', component: RenderComponentsInCells, navIcon: 'icon-grid-tools' },
                 { text: 'Stock Ticker', component: StockTickerGrid, navIcon: 'icon-ticker-grid' }
             ]},
             { text: 'Redux Grid', component: ReduxGrid, navIcon: 'icon-Redux-Grid' }

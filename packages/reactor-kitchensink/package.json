@@ -1,6 +1,6 @@
 {
   "name": "@extjs/reactor-kitchensink",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A boilerplate project showing all Ext JS modern components.",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "local": "webpack-dev-server --progress --env.local=true",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --env.prod=true",
     "build:sdk": "touch build/ext-react/app.json",
-    "prod": "pushd ./build; php -S localhost:8000; popd",
+    "prod": "cd build && static-server --port 8084",
     "extract-code": "node extract-code.js --watch"
   },
   "repository": {
@@ -23,16 +23,16 @@
   },
   "homepage": "https://github.com/sencha/extjs-reactor#readme",
   "dependencies": {
-    "@extjs/ext-react": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-calendar": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-charts": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-d3": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-exporter": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-pivot": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-pivot-d3": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-treegrid": "> 6.5.1-0 < 6.5.2",
-    "@extjs/ext-react-ux": "> 6.5.1-0 < 6.5.2",
-    "@extjs/reactor": "^1.0.0",
+    "@extjs/ext-react": "^6.5.0",
+    "@extjs/ext-react-calendar": "^6.5.0",
+    "@extjs/ext-react-charts": "^6.5.0",
+    "@extjs/ext-react-d3": "^6.5.0",
+    "@extjs/ext-react-exporter": "^6.5.0",
+    "@extjs/ext-react-pivot": "^6.5.0",
+    "@extjs/ext-react-pivot-d3": "^6.5.0",
+    "@extjs/ext-react-treegrid": "^6.5.0",
+    "@extjs/ext-react-ux": "^6.5.0",
+    "@extjs/reactor": "^1.1.0",
     "babel-polyfill": "^6.23.0",
     "babel-runtime": "^6.23.0",
     "d3": "4.5.0",
@@ -46,8 +46,8 @@
     "redux": "^3.6.0"
   },
   "devDependencies": {
-    "@extjs/reactor-babel-plugin": "^1.0.0",
-    "@extjs/reactor-webpack-plugin": "^1.0.1",
+    "@extjs/reactor-babel-plugin": "^1.1.0",
+    "@extjs/reactor-webpack-plugin": "^1.1.0",
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -62,6 +62,7 @@
     "mkdirp": "^0.5.1",
     "open-browser-webpack-plugin": "0.0.5",
     "rimraf": "^2.6.1",
+    "static-server": "^2.0.4",
     "style-loader": "^0.13.1",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5",
